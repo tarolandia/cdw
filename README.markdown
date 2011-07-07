@@ -30,6 +30,19 @@ function cdw
 
 * You can add the file _cdw_ to your bash_completion.d folder (/etc/bash_completion.d) for first level autocompletion
 
+**IMPORTANT**
+This script must be placed before these lines if you use the auto-completion:
+
+```bash
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ]; then
+   /etc/bash_completion
+fi
+
+```
+
 ## Example
 
 ```bash
