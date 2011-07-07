@@ -34,7 +34,7 @@ function cdw
 
 ```bash
 ls /var/www/
-project1 project2 projec3
+project1 project2 projec3 qwe qwe3 qwe4
 
 #From anywhere
 
