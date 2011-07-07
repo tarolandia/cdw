@@ -1,3 +1,4 @@
+#! /bin/bash
 # CDW custum function
 export PATH_CDW=/var/www/
 function cdw 
