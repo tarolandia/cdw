@@ -5,7 +5,7 @@ _cdw()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(ls -d / $PATH_CDW*/ | xargs -n1 basename)
+    opts=$(ls -d $PATH_CDW*/ | xargs -n1 basename)
 
     if [[ -z "${cur}"  ]] ; then
        COMPREPLY=( $opts )
