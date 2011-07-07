@@ -26,7 +26,7 @@ function cdw
 }  
 ```
 
-* PATH_CDW: replace this param to the one of your project's folder
+* PATH_CDW: replace this param to the one of your project's folder. **NOTE:** the path must end in "/"
 
 * You can add the file _cdw_ to your bash_completion.d folder (/etc/bash_completion.d) for first level autocompletion
 
