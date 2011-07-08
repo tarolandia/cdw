@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>tarolandia/cdw @ GitHub</title>
+
+  <style type="text/css">
+    body {
+      margin-top: 1.0em;
+      background-color: #000000;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+      color: #ffffff;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+    h1 { font-size: 3.8em; color: #ffffff; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #ffffff; }
+    h3 { text-align: center; color: #ffffff; }
+    a { color: #ffffff; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+  </style>
+</head>
+
+<body>
+  <a href="http://github.com/tarolandia/cdw"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/tarolandia/cdw/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/tarolandia/cdw/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="http://github.com/tarolandia/cdw">CDW - </a>
+      <span class="small">by <a href="http://github.com/tarolandia">tarolandia</a></span></h1>
+
+    <div class="description">
+      Shortcut to your projects.
+Go directly to your project's root using this small function.
+    </div>
+
+    <p>
+ You just need to add this code to your bashrc file.
+
+_File: cdw.bashrc_
+
+```bash
+# CDW custum function
+export PATH_CDW=/var/www/
+function cdw 
+{
+  if [ -z "$1" ]; then
+    echo "Empty params: switching to CDW path..."
+    cd $PATH_CDW
+  else
+    cd $PATH_CDW
+    if [ -d $1 ]; then
+      cd $1
+    else
+      echo "$PATH_CDW$1: project not found"
+      cd -
+    fi
+  fi  
+}  
+```
+
+* PATH_CDW: replace this param to the one of your project's folder. **NOTE:** the path must end in "/"
+
+* You can add the file _cdw_ to your bash_completion.d folder (/etc/bash_completion.d) for first level autocompletion
+
+**IMPORTANT**
+This script must be placed before these lines if you use the auto-completion:
+
+```bash
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ]; then
+   /etc/bash_completion
+fi
+
+```
+
+## Example
+
+```bash
+ls /var/www/
+project1 project2 projec3 qwe qwe3 qwe4
+
+#From anywhere
+
+cdw [tab] [tab]
+project1 project2 projec3 qwe qwe3 qwe4
+
+cdw qwe[tab]
+qwe qwe3 qwe4
+
+[enter]
+
+/var/www/qwe/
+
+```
+</p><h2>Authors</h2>
+<p>Lautaro Orazi (orazile@gmail.com)<br/><br/>      </p>
+<h2>Contact</h2>
+<p>Lautaro (orazile@gmail.com)<br/>      </p>
+
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/tarolandia/cdw/zipball/master">zip</a> or
+      <a href="http://github.com/tarolandia/cdw/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/tarolandia/cdw</pre>
+    </p>
+
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/tarolandia/cdw">tarolandia/cdw</a>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
