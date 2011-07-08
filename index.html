@@ -51,11 +51,11 @@ Go directly to your project's root using this small function.
     </div>
 
     <p>
- You just need to add this code to your bashrc file.
+ You just need to add this code to your bashrc file.<br>
 
-_File: cdw.bashrc_
+<span style="font-style: italic;">File: cdw.bashrc</span>
 
-```bash
+<pre>
 # CDW custum function
 export PATH_CDW=/var/www/
 function cdw 
@@ -73,16 +73,20 @@ function cdw
     fi
   fi  
 }  
-```
+</pre>
 
-* PATH_CDW: replace this param to the one of your project's folder. **NOTE:** the path must end in "/"
+<ul>
+<li> PATH_CDW: replace this param to the one of your project's folder. <strong>NOTE:</strong> the path must end in "/"</li>
 
-* You can add the file _cdw_ to your bash_completion.d folder (/etc/bash_completion.d) for first level autocompletion
-
-**IMPORTANT**
+<li>You can add the file _cdw_ to your bash_completion.d folder (/etc/bash_completion.d) for first level autocompletion</li>
+</ul>
+</p>
+<p>
+<strong>IMPORTANT</strong>
 This script must be placed before these lines if you use the auto-completion:
+</p>
 
-```bash
+<pre>
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -90,11 +94,11 @@ if [ -f /etc/bash_completion ]; then
    /etc/bash_completion
 fi
 
-```
+</pre>
 
-## Example
+<h2>Example</h2>
 
-```bash
+<pre>
 ls /var/www/
 project1 project2 projec3 qwe qwe3 qwe4
 
@@ -110,11 +114,14 @@ qwe qwe3 qwe4
 
 /var/www/qwe/
 
-```
+</pre>
 </p><h2>Authors</h2>
-<p>Lautaro Orazi (orazile@gmail.com)<br/><br/>      </p>
+<p>Lautaro Orazi (orazile@gmail.com)
+<br/>
+<br/>      </p>
 <h2>Contact</h2>
-<p>Lautaro (orazile@gmail.com)<br/>      </p>
+<p>Lautaro (orazile@gmail.com)
+<br/>      </p>
 
 
     <h2>Download</h2>
